@@ -35,6 +35,7 @@
       File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
       raise exceptions.SyntaxException(
       mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+      
       -->
    </body>
 </html>
