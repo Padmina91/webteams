@@ -34,14 +34,6 @@ def main():
    # Start server
    cherrypy.engine.start()
    cherrypy.engine.block()
-   
-#class Control:
-#   def __init__(self):
-#      pass
-#
-#   @cherrypy.expose
-#   def shutdown(self):
-#      cherrypy.engine.exit()
 
 if __name__ == '__main__':
    main()
