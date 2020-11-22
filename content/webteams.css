@@ -1,0 +1,21 @@
+.body_div {
+    text-align: center;
+}
+
+.body_span {
+    align-content: center;
+    vertical-align: middle;
+    width: 70%;
+    text-align: center;
+}
+
+#name_test {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+.a_button {
+    text-decoration: none;
+    text-align: center;
+
+}

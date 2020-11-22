@@ -25,7 +25,7 @@ class View:
 
    def create_list1(self, data_param):
       template = self.lookup.get_template('list.tpl')
-      markup = template.render(data = data_param, listform_text = "Aufzaehlung", listform = "list2")
+      markup = template.render(data = data_param, listform_text = "Aufzählung", listform = "list2")
       return markup
    
    def create_list2(self, data_param):

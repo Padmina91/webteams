@@ -1138,3 +1138,211 @@ Request Headers:
   CONNECTION: keep-alive
   UPGRADE-INSECURE-REQUESTS: 1
   CACHE-CONTROL: max-age=0
+[22/Nov/2020:13:21:38] ENGINE Bus STARTING
+[22/Nov/2020:13:21:38] ENGINE Serving on http://127.0.0.1:8080
+[22/Nov/2020:13:21:38] ENGINE Bus STARTED
+[22/Nov/2020:13:22:34] ENGINE Bus STOPPING
+[22/Nov/2020:13:22:34] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[22/Nov/2020:13:22:34] ENGINE Bus STOPPED
+[22/Nov/2020:13:22:34] ENGINE Bus EXITING
+[22/Nov/2020:13:22:34] ENGINE Waiting for child threads to terminate...
+[22/Nov/2020:13:22:34] ENGINE Bus EXITED
+[22/Nov/2020:13:22:34] ENGINE Waiting for thread CP Server Thread-4.
+[22/Nov/2020:13:22:45] ENGINE Bus STARTING
+[22/Nov/2020:13:22:45] ENGINE Serving on http://127.0.0.1:8080
+[22/Nov/2020:13:22:45] ENGINE Bus STARTED
+[22/Nov/2020:13:48:58] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 21, in create_list
+    markup = self.create_list1(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 27, in create_list1
+    template = self.lookup.get_template('list.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 347, in _check
+    return self._load(template.filename, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 287, in parse
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Unterminated control keyword: 'for' in file 'templates/list.tpl' at line: 20 char: 1
+[22/Nov/2020:13:48:58] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  REFERER: http://127.0.0.1:8080/save
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+  CACHE-CONTROL: max-age=0
+[22/Nov/2020:13:56:15] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 21, in create_list
+    markup = self.create_list1(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 27, in create_list1
+    template = self.lookup.get_template('list.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 347, in _check
+    return self._load(template.filename, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 264, in parse
+    if self.match_control_line():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 465, in match_control_line
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: No starting keyword 'for' for 'endfor *}' in file 'templates/list.tpl' at line: 45 char: 1
+[22/Nov/2020:13:56:15] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  REFERER: http://127.0.0.1:8080/save
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+  CACHE-CONTROL: max-age=0
+[22/Nov/2020:14:23:47] ENGINE Bus STOPPING
+[22/Nov/2020:14:23:47] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[22/Nov/2020:14:23:47] ENGINE Bus STOPPED
+[22/Nov/2020:14:23:47] ENGINE Bus EXITING
+[22/Nov/2020:14:23:47] ENGINE Waiting for child threads to terminate...
+[22/Nov/2020:14:23:47] ENGINE Bus EXITED
+[22/Nov/2020:14:23:47] ENGINE Waiting for thread CP Server Thread-5.
+[22/Nov/2020:14:23:58] ENGINE Bus STARTING
+[22/Nov/2020:14:23:59] ENGINE Serving on http://127.0.0.1:8080
+[22/Nov/2020:14:23:59] ENGINE Bus STARTED
+[22/Nov/2020:14:38:11] ENGINE Bus STOPPING
+[22/Nov/2020:14:38:12] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[22/Nov/2020:14:38:12] ENGINE Bus STOPPED
+[22/Nov/2020:14:38:12] ENGINE Bus EXITING
+[22/Nov/2020:14:38:12] ENGINE Waiting for child threads to terminate...
+[22/Nov/2020:14:38:12] ENGINE Bus EXITED
+[22/Nov/2020:14:38:12] ENGINE Waiting for thread CP Server Thread-3.
+[22/Nov/2020:14:38:23] ENGINE Bus STARTING
+[22/Nov/2020:14:38:23] ENGINE Serving on http://127.0.0.1:8080
+[22/Nov/2020:14:38:23] ENGINE Bus STARTED
+[22/Nov/2020:15:32:23] ENGINE Bus STARTING
+[22/Nov/2020:15:32:23] ENGINE Serving on http://127.0.0.1:8080
+[22/Nov/2020:15:32:23] ENGINE Bus STARTED
+[22/Nov/2020:15:32:53] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 23, in edit
+    return self.create_form(id)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 63, in create_form
+    return self.view.create_form(id, data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 38, in create_form
+    markup = template.render(data = data_param, key = id)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "form_tpl", line 25, in render_body
+TypeError: 'NoneType' object is not subscriptable
+[22/Nov/2020:15:32:53] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/css,*/*;q=0.1
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://127.0.0.1:8080/edit/20
+[22/Nov/2020:15:41:47] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 23, in edit
+    return self.create_form(id)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 63, in create_form
+    return self.view.create_form(id, data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 38, in create_form
+    markup = template.render(data = data_param, key = id)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "form_tpl", line 25, in render_body
+TypeError: 'NoneType' object is not subscriptable
+[22/Nov/2020:15:41:47] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/css,*/*;q=0.1
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://127.0.0.1:8080/edit/22

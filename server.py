@@ -25,7 +25,7 @@ class Server:
             '/': {'tools.staticdir.root': current_dir, 'tools.staticdir.on': True, 'tools.staticdir.dir': './content'}}
         # Mount static content handler
         cherrypy.tree.mount(application.Application(), '/', static_config)
-        cherrypy.tree.mount(self, '/shutdown', None)
+        cherrypy.tree.mount(self, '/shutdown', {'/': {}})
         # suppress traceback-info
         cherrypy.config.update({'request.show_tracebacks': False})
         # Start server
