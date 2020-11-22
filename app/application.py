@@ -65,7 +65,3 @@ class Application:
    @cherrypy.expose
    def toggle_view(self):
       self.view.toggle_view()
-
-   @cherrypy.expose
-   def shutdown(self):
-      cherrypy.engine.exit()
