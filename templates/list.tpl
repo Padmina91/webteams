@@ -30,6 +30,9 @@
       <div>
          <a href="/add">erfassen</a>
       </div>
-      <script type="text/javascript" src="/webteams.js"></script>
+      <div>
+         <button class="toggle_list">Als ${listform_text} darstellen</button>
+      </div>
+      <script type="text/javascript" src="webteams.js"></script>
    </body>
 </html>

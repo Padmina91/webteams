@@ -1,3 +1,1140 @@
 [22/Nov/2020:09:44:52] ENGINE Bus STARTING
 [22/Nov/2020:09:44:52] ENGINE Serving on http://127.0.0.1:8080
 [22/Nov/2020:09:44:52] ENGINE Bus STARTED
+[22/Nov/2020:10:37:20] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 17, in create_list
+    markup = template.render(data = data_param)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "list_tpl", line 47, in render_body
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 230, in __str__
+    raise NameError("Undefined")
+NameError: Undefined
+[22/Nov/2020:10:37:20] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+[22/Nov/2020:11:48:25] ENGINE Bus STARTING
+[22/Nov/2020:11:48:25] ENGINE Serving on http://127.0.0.1:8080
+[22/Nov/2020:11:48:25] ENGINE Bus STARTED
+[22/Nov/2020:11:54:20] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 22, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 31, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:11:54:20] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+  CACHE-CONTROL: max-age=0
+[22/Nov/2020:11:54:41] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 22, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 31, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:11:54:41] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+[22/Nov/2020:11:54:43] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 22, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 31, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:11:54:43] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+[22/Nov/2020:11:55:06] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 22, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 31, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:11:55:06] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+  CACHE-CONTROL: max-age=0
+[22/Nov/2020:11:56:46] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 22, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 31, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:11:56:46] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+  CACHE-CONTROL: max-age=0
+[22/Nov/2020:11:56:50] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 22, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 31, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:11:56:50] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+  CACHE-CONTROL: max-age=0
+[22/Nov/2020:11:56:54] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 22, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 31, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:11:56:54] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+  CACHE-CONTROL: max-age=0
+[22/Nov/2020:11:57:00] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 33, in save
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 22, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 31, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:11:57:00] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  ORIGIN: http://127.0.0.1:8080
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://127.0.0.1:8080/add
+  UPGRADE-INSECURE-REQUESTS: 1
+  Content-Type: application/x-www-form-urlencoded
+  Content-Length: 109
+[22/Nov/2020:11:57:10] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 33, in save
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 22, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 31, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:11:57:10] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  ORIGIN: http://127.0.0.1:8080
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://127.0.0.1:8080/add
+  UPGRADE-INSECURE-REQUESTS: 1
+  Content-Type: application/x-www-form-urlencoded
+  Content-Length: 109
+[22/Nov/2020:11:57:53] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 33, in save
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 22, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 31, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:11:57:53] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  REFERER: http://127.0.0.1:8080/add
+  ORIGIN: http://127.0.0.1:8080
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+  CACHE-CONTROL: max-age=0
+  Content-Type: application/x-www-form-urlencoded
+  Content-Length: 109
+[22/Nov/2020:11:57:59] ENGINE Bus STOPPING
+[22/Nov/2020:11:58:00] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[22/Nov/2020:11:58:00] ENGINE Bus STOPPED
+[22/Nov/2020:11:58:00] ENGINE Bus EXITING
+[22/Nov/2020:11:58:00] ENGINE Waiting for child threads to terminate...
+[22/Nov/2020:11:58:00] ENGINE Bus EXITED
+[22/Nov/2020:11:58:00] ENGINE Waiting for thread CP Server Thread-7.
+[22/Nov/2020:11:58:11] ENGINE Bus STARTING
+[22/Nov/2020:11:58:11] ENGINE Serving on http://127.0.0.1:8080
+[22/Nov/2020:11:58:11] ENGINE Bus STARTED
+[22/Nov/2020:11:58:12] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 22, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 31, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:11:58:12] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+[22/Nov/2020:12:02:39] ENGINE Bus STARTING
+[22/Nov/2020:12:02:39] ENGINE Serving on http://127.0.0.1:8080
+[22/Nov/2020:12:02:39] ENGINE Bus STARTED
+[22/Nov/2020:12:02:50] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 22, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 31, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:12:02:50] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+  CACHE-CONTROL: max-age=0
+[22/Nov/2020:12:03:28] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 22, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 31, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:12:03:28] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+  CACHE-CONTROL: max-age=0
+[22/Nov/2020:12:03:39] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 22, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 31, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:12:03:39] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+[22/Nov/2020:12:04:18] ENGINE Bus STOPPING
+[22/Nov/2020:12:04:18] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[22/Nov/2020:12:04:18] ENGINE Bus STOPPED
+[22/Nov/2020:12:04:18] ENGINE Bus EXITING
+[22/Nov/2020:12:04:18] ENGINE Waiting for child threads to terminate...
+[22/Nov/2020:12:04:18] ENGINE Bus EXITED
+[22/Nov/2020:12:04:18] ENGINE Waiting for thread CP Server Thread-11.
+[22/Nov/2020:12:04:29] ENGINE Bus STARTING
+[22/Nov/2020:12:04:29] ENGINE Serving on http://127.0.0.1:8080
+[22/Nov/2020:12:04:29] ENGINE Bus STARTED
+[22/Nov/2020:12:04:34] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 23, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 32, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:12:04:34] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+  CACHE-CONTROL: max-age=0
+[22/Nov/2020:12:07:14] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 23, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 32, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:12:07:14] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+  CACHE-CONTROL: max-age=0
+[22/Nov/2020:12:09:10] ENGINE Bus STARTING
+[22/Nov/2020:12:09:10] ENGINE Serving on http://127.0.0.1:8080
+[22/Nov/2020:12:09:10] ENGINE Bus STARTED
+[22/Nov/2020:12:09:16] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 23, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 32, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:12:09:16] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+[22/Nov/2020:12:10:07] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 23, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 32, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:12:10:07] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+  CACHE-CONTROL: max-age=0
+[22/Nov/2020:12:11:26] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 249, in get_template
+    return self._check(uri, self._collection[uri])
+KeyError: 'list2.tpl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 15, in index
+    return self.create_list()
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 56, in create_list
+    return self.view.create_list(data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 23, in create_list
+    markup = self.create_list2(data_param)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 32, in create_list2
+    template = self.lookup.get_template('list2.tpl')
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 260, in get_template
+    return self._load(srcfile, uri)
+  File "C:\Python39\lib\site-packages\mako\lookup.py", line 322, in _load
+    self._collection[uri] = template = Template(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 348, in __init__
+    module = self._compile_from_file(path, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 430, in _compile_from_file
+    code, module = _compile_text(self, data, filename)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 733, in _compile_text
+    source, lexer = _compile(
+  File "C:\Python39\lib\site-packages\mako\template.py", line 712, in _compile
+    node = lexer.parse()
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 262, in parse
+    if self.match_expression():
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 427, in match_expression
+    text, end = self.parse_until_text(True, r"\|", r"}")
+  File "C:\Python39\lib\site-packages\mako\lexer.py", line 143, in parse_until_text
+    raise exceptions.SyntaxException(
+mako.exceptions.SyntaxException: Expected: \|,} in file 'templates/list2.tpl' at line: 33 char: 42
+[22/Nov/2020:12:11:26] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+  CACHE-CONTROL: max-age=0

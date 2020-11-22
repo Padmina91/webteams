@@ -63,5 +63,9 @@ class Application:
       return self.view.create_form(id, data)
 
    @cherrypy.expose
+   def toggle_view(self):
+      self.view.toggle_view()
+
+   @cherrypy.expose
    def shutdown(self):
       cherrypy.engine.exit()
