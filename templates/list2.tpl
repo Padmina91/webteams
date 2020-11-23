@@ -27,7 +27,7 @@
             % endfor
          </ul>
          <span>
-            <a class="a_button" href="/add/${listform}/">erfassen</a>
+            <a class="a_button" href="/add">erfassen</a>
          </span>
          <span>
             <button class="toggle_list">Als ${listform_text} darstellen</button>

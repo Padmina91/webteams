@@ -20,7 +20,7 @@ function toggle_view() {
    toggle_req.open("GET", url);
    toggle_req.onload = () => {
       window.location.replace("http://127.0.0.1:8080");
-      location.reload();
+      //location.reload();
    }
    toggle_req.send();
 }
