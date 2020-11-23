@@ -1346,3 +1346,208 @@ Request Headers:
   DNT: 1
   CONNECTION: keep-alive
   REFERER: http://127.0.0.1:8080/edit/22
+[23/Nov/2020:16:41:15] ENGINE Bus STARTING
+[23/Nov/2020:16:41:16] ENGINE Serving on http://127.0.0.1:8080
+[23/Nov/2020:16:41:16] ENGINE Bus STARTED
+[23/Nov/2020:19:06:03] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 23, in edit
+    return self.create_form(id)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 63, in create_form
+    return self.view.create_form(id, data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 38, in create_form
+    markup = template.render(data = data_param, key = id)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "form_tpl", line 25, in render_body
+TypeError: 'NoneType' object is not subscriptable
+[23/Nov/2020:19:06:03] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/css,*/*;q=0.1
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://127.0.0.1:8080/edit/18
+[23/Nov/2020:19:06:45] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 23, in edit
+    return self.create_form(id)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 63, in create_form
+    return self.view.create_form(id, data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 38, in create_form
+    markup = template.render(data = data_param, key = id)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "form_tpl", line 25, in render_body
+TypeError: 'NoneType' object is not subscriptable
+[23/Nov/2020:19:06:45] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/css,*/*;q=0.1
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://127.0.0.1:8080/edit/29
+[23/Nov/2020:19:09:23] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 23, in edit
+    return self.create_form(id)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 63, in create_form
+    return self.view.create_form(id, data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 38, in create_form
+    markup = template.render(data = data_param, key = id)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "form_tpl", line 25, in render_body
+TypeError: 'NoneType' object is not subscriptable
+[23/Nov/2020:19:09:23] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/css,*/*;q=0.1
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://127.0.0.1:8080/edit/19
+[23/Nov/2020:19:52:10] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 23, in edit
+    return self.create_form(id)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 63, in create_form
+    return self.view.create_form(id, data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 38, in create_form
+    markup = template.render(data = data_param, key = id)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "form_tpl", line 25, in render_body
+TypeError: 'NoneType' object is not subscriptable
+[23/Nov/2020:19:52:10] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/css,*/*;q=0.1
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://127.0.0.1:8080/edit/30
+[23/Nov/2020:19:57:58] ENGINE Bus STOPPING
+[23/Nov/2020:19:57:58] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[23/Nov/2020:19:57:58] ENGINE Bus STOPPED
+[23/Nov/2020:19:57:58] ENGINE Bus EXITING
+[23/Nov/2020:19:57:58] ENGINE Bus EXITED
+[23/Nov/2020:19:57:58] ENGINE Waiting for child threads to terminate...
+[23/Nov/2020:19:57:58] ENGINE Waiting for thread CP Server Thread-10.
+[23/Nov/2020:19:58:09] ENGINE Bus STARTING
+[23/Nov/2020:19:58:10] ENGINE Serving on http://127.0.0.1:8080
+[23/Nov/2020:19:58:10] ENGINE Bus STARTED
+[23/Nov/2020:20:35:18] HTTP 
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Python39\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Python39\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Python39\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 23, in edit
+    return self.create_form(id)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\application.py", line 63, in create_form
+    return self.view.create_form(id, data)
+  File "C:\Users\Schne\AppData\Local\Programs\Python\Python37\python-workspace\web\p1\webteams\app\view.py", line 38, in create_form
+    markup = template.render(data = data_param, key = id)
+  File "C:\Python39\lib\site-packages\mako\template.py", line 476, in render
+    return runtime._render(self, self.callable_, args, data)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 878, in _render
+    _render_context(
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 920, in _render_context
+    _exec_template(inherit, lclcontext, args=args, kwargs=kwargs)
+  File "C:\Python39\lib\site-packages\mako\runtime.py", line 947, in _exec_template
+    callable_(context, *args, **kwargs)
+  File "form_tpl", line 25, in render_body
+TypeError: 'NoneType' object is not subscriptable
+[23/Nov/2020:20:35:18] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1:8080
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0
+  ACCEPT: text/css,*/*;q=0.1
+  ACCEPT-LANGUAGE: en-US,en;q=0.5
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://127.0.0.1:8080/edit/33
+[23/Nov/2020:20:36:26] ENGINE Bus STOPPING
+[23/Nov/2020:20:36:26] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[23/Nov/2020:20:36:26] ENGINE Bus STOPPED
+[23/Nov/2020:20:36:26] ENGINE Bus EXITING
+[23/Nov/2020:20:36:26] ENGINE Waiting for child threads to terminate...
+[23/Nov/2020:20:36:26] ENGINE Bus EXITED
+[23/Nov/2020:20:36:26] ENGINE Waiting for thread CP Server Thread-4.

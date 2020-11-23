@@ -26,14 +26,14 @@
    	               <td>${data[key][5]}</td>
 		               <td>${data[key][6]}</td>
 		               <td>${data[key][7]}</td>
-                     <td><a class="a_button" href="/edit/${key}">bearbeiten</a></td>
+                     <td><a class="pseudo-button" href="/edit/${key}">bearbeiten</a></td>
                      <td><button class="delete_button" value="${key}">löschen</button></td>
                   </tr>
                </tr>
                % endfor
             </table>
             <span>
-               <a class="a_button" href="/add">erfassen</a>
+               <a class="pseudo-button" href="/add">erfassen</a>
             </span>
             <span>
                <button class="toggle_list">Als ${listform_text} darstellen</button>

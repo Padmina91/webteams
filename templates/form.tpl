@@ -68,7 +68,7 @@
             </div>
             <div>
                <input type="submit" value="Speichern"/>
-               <a id="abbrechen" href="http://127.0.0.1:8080/">Abbrechen</a>
+               <a class="pseudo-button" id="abbrechen" href="http://127.0.0.1:8080/">Abbrechen</a>
             </div>
          </form>
       </span>
