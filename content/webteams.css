@@ -1,15 +1,32 @@
 body {
-    background: linear-gradient(to bottom, rgb(255, 0, 55), rgba(0,0,0,0),  rgb(255, 0, 55));
-    font-family: "Book Antiqua", sans-serif;
-    color: steelblue;
+    background: rgba(255, 133, 133, 0.781);
+    font-family: 'Nunito', sans-serif;
+    color: darkblue;
     font-weight: 800;
 }
 
-a.pseudo-button {
+a.pseudo-button, button {
+    font-family: 'Quicksand', sans-serif;
     color: black;
-    font-weight: normal;
-    font-size: 1rem;
+    font-weight: 400;
+    font-size: 0.8rem;
     text-decoration: none;
     border: 1px solid darkgrey;
     background: lightgray;
-  }
+    padding: 0.1rem;
+}
+
+.centered-class {
+    border: 1px solid black;
+}
+
+#doggo-picture {
+    height: 70%;
+    width: 70%;
+    border: 10px dashed black;
+    padding: 0px;
+    margin: 1px;
+    /*display: none;
+    visibility: hidden;*/
+    float: inline-end;
+}

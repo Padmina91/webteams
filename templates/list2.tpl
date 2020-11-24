@@ -4,6 +4,8 @@
    <head>
       <title>Web-Teams</title>
       <meta charset="UTF-8" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
       <link href="webteams.css" rel="stylesheet" type="text/css" />
    </head>
    <body>
@@ -34,5 +36,8 @@
          </span>
          <script type="text/javascript" src="webteams.js"></script>
       </span>
+      <div class="centered-class">
+         <img id="doggo-picture" src="https://static.giga.de/wp-content/uploads/2018/01/dog-shiba-GettyImages-824848938.jpg" />
+      </div>
    </body>
 </html>
