@@ -9,7 +9,7 @@
       <link href="webteams.css" rel="stylesheet" type="text/css" />
    </head>
    <body>
-      <span class="body_span">
+      <div class="outer-flex-container">
          <form id="form" action="/save" method="POST">
             <input type="hidden" value="${key}" id="id_param" name="id_param" />
             <div>
@@ -68,11 +68,12 @@
                       id="semesteranzahl2"
                       name="semesteranzahl2" required />
             </div>
-            <div>
+            <div class="inner-flex-container">
                <input type="submit" value="Speichern"/>
                <a class="pseudo-button" id="abbrechen" href="http://127.0.0.1:8080/">Abbrechen</a>
             </div>
          </form>
-      </span>
+      </div>
+      <script type="text/javascript" src="webteams.js"></script>
    </body>
 </html>

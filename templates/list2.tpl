@@ -9,7 +9,7 @@
       <link href="webteams.css" rel="stylesheet" type="text/css" />
    </head>
    <body>
-      <span class="body_span">
+      <div class="outer-flex-container">
          <%
             nr = 0
          %>
@@ -18,26 +18,25 @@
             <%
                nr += 1
             %>
-            <li>Team ${nr}:
+            <li><span class="team-header">Team ${nr}:</span>
                <a class="pseudo-button" href="/edit/${key}">bearbeiten</a>
                <button class="delete_button" value="${key}">löschen</button>
                <ul>
-                  <li>${data[key][0]}, ${data[key][1]}, ${data[key][2]}, ${data[key][3]}</li>
-                  <li>${data[key][4]}, ${data[key][5]}, ${data[key][6]}, ${data[key][7]}</li>
+                  <li>Name: ${data[key][0]}, Vorname: ${data[key][1]}, Matr-Nr.: ${data[key][2]}, Anzahl Semester: ${data[key][3]}</li>
+                  <li>Name: ${data[key][4]}, Vorname: ${data[key][5]}, Matr-Nr.: ${data[key][6]}, Anzahl Semester: ${data[key][7]}</li>
                </ul>
             </li>
             % endfor
          </ul>
-         <span>
-            <a class="pseudo-button" href="/add">erfassen</a>
-         </span>
-         <span>
-            <button class="toggle_list">Als ${listform_text} darstellen</button>
-         </span>
-         <script type="text/javascript" src="webteams.js"></script>
-      </span>
-      <div class="centered-class">
-         <img id="doggo-picture" src="https://static.giga.de/wp-content/uploads/2018/01/dog-shiba-GettyImages-824848938.jpg" />
+         <div class="inner-flex-container">
+            <span>
+               <a class="pseudo-button" href="/add">erfassen</a>
+            </span>
+            <span>
+               <button class="toggle_list">Als ${listform_text} darstellen</button>
+            </span>
+         </div>
       </div>
+      <script type="text/javascript" src="webteams.js"></script>
    </body>
 </html>
