@@ -18,17 +18,17 @@
             <tr class="team">
                <tr>
                   <td>${data[key][0]}</td>
-		            <td>${data[key][1]}</td>
-		            <td>${data[key][2]}</td>
-		            <td>${data[key][3]}</td>
+                  <td>${data[key][1]}</td>
+                  <td>${data[key][2]}</td>
+                  <td>${data[key][3]}</td>
                </tr>
                <tr>
                   <td>${data[key][4]}</td>
-   	            <td>${data[key][5]}</td>
-		            <td>${data[key][6]}</td>
-		            <td>${data[key][7]}</td>
+                  <td>${data[key][5]}</td>
+                  <td>${data[key][6]}</td>
+                  <td>${data[key][7]}</td>
                   <td><a class="pseudo-button" href="/edit/${key}">bearbeiten</a></td>
-                  <td><button class="delete_button" value="${key}">löschen</button></td>
+                  <td><a class="pseudo-button delete-button" href="/delete/${key}">löschen</a></td>
                </tr>
             </tr>
             % endfor
@@ -38,7 +38,7 @@
                <a class="pseudo-button" href="/add">erfassen</a>
             </span>
             <span>
-               <button class="toggle_list">als ${listform_text} darstellen</button>
+               <a class="pseudo-button" href="/toggle_view">als Aufzählung darstellen</a>
             </span>
          </div>
       </div>

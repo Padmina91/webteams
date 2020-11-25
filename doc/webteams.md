@@ -46,19 +46,23 @@ Die Benutzerschnittstelle für Aktionen, die der Benutzer auf der Webseite initi
 
 Da es sich hier um einen Anchor-Tag (\<a>) handelt, wird durch Klick auf "erfassen" ein Link aufgerufen und diese Anfrage wird durch die "application.py" entgegengenommen, die ihrerseits ein leeres Formular erzeugt. Hierzu bedient sich die Klasse "Application" mehreren Hilfsmethoden aus den Klassen "Database" und "DataId" und "View".
 
-#### 1.2.2.2. Aktion "als Aufzählung darstellen" und "als Liste darstellen" ####
+#### 1.2.2.2. Aktion "speichern" ####
 
-Hierbei handelt es sich um einen Button (\<button>), auf dem ein EventListener liegt. Daher ist die Schnittstelle in diesem Fall die "webteams.js", die ihrerseits eine Anfrage an den Webserver schickt, aber dazu später im Kapitel <span style="color:red;">später ergänzen!</span> mehr.
+Der Pseudo-Button "speichern" ist eigentlich ein input-Element (\<input type="submit" value="speichern" class="pseudo-button"/>), das eine POST-Anfrage an den Server schickt. Die eingegebenen Daten und die von der Applikation erzeugte ID werden im Request-Body mitgesendet.
 
-#### 1.2.2.3. Aktion "bearbeiten" ####
+#### 1.2.2.3. Aktion "als Aufzählung darstellen" und "als Liste darstellen" ####
+
+Hierbei handelt es sich um einen Anchor-Tag (\<a>), der auf die URL "/toggle_view" verweist, was die Methode `toggle_view()` in der "application.py" auslöst. Diese ändert die view_file.json ab und leitet den Browser zur Startseite weiter, die dann mit der neuen Ansicht geöffnet wird.
+
+#### 1.2.2.4. Aktion "bearbeiten" ####
 
 Hierbei handelt sich auch um einen Anchor-Tag (\<a>) wie bei der Aktion "erfassen". Es wird ein Link aufgerufen, dem als Parameter die ID des zu bearbeitenden Datensatzes angehangen wird. Diese Information wird von der "application.py" aufgenommen und es wird ein mit den entsprechenden Daten gefülltes Formular erzeugt. Hierzu werden wieder Hilfsmethoden aus den Klassen "Database" und "DataId" und "View" herangezogen.
 
-#### 1.2.2.4. Aktion "löschen" ####
+#### 1.2.2.5. Aktion "löschen" ####
 
-Hierbei handelt es sich wieder um einen Button (\<button>), auf dem ebenfalls ein EventListener liegt. Nach einem Klick auf den "löschen"-Button wird zunächst durch die "webteams.js" ein Dialog erzeugt, der den Benutzer fragt,  ob er den Eintrag wirklichen löschen möchte. Bestätigt er diesen Dialog mit "OK", dann schickt die Methode `confirm_delete()` eine Anfrage an den Webserver.
+Hierbei handelt es sich wieder um einen Anchor-Tag (\<a>). Nach einem Klick auf den "löschen"-Button wird zunächst durch die "webteams.js" ein Dialog erzeugt, der den Benutzer fragt,  ob er den Eintrag wirklichen löschen möchte. Bricht der Nutzer das Löschen mit Klick auf "Cancel" ab, dann verhindert die "webteams.js" mit der Methode `event.preventDefault()` die Ausführung der Lösch-Aktion. Klickt der Benutzer hingegen auf "OK", dann wird die Löschung durchgeführt und der Browser wieder auf die Startseite umgeleitet.
 
-#### 1.2.2.5. Aktion "abbrechen" ####
+#### 1.2.2.6. Aktion "abbrechen" ####
 
 Der Anchor-Tag (\<a>) "abbrechen" führt wieder auf die Startseite zurück, ohne das Formular abzuschicken.
 
@@ -112,7 +116,7 @@ Das Löschen von Einträgen wurde implementiert. Hierzu wurde ein Button bei jed
 
 Die Möglichkeit zur Umschaltung zwischen einer Listenansicht und einer Aufzählungsansicht wurde geschaffen. Bei Klick auf die Schaltfläche "als Aufzählung/Liste darstellen" aktiviert sich die jeweils andere Ansicht.
 
-Außerdem wurde die Webseite mit CSS gestylt. Unter anderem wurden die Aktionen "erfassen", "bearbeiten", "löschen", "als Aufzählung/Liste darstellen", "abbrechen" und "speichern" allesamt äußerlich einheitlich als Schaltfläche dargestellt, obwohl es sich um 3 unterschiedliche HTML-Elemente handelt (\<a>, \<button>, \<form type="submit">).
+Außerdem wurde die Webseite mit CSS gestylt. Unter anderem wurden die Aktionen "erfassen", "bearbeiten", "löschen", "als Aufzählung/Liste darstellen", "abbrechen" und "speichern" allesamt äußerlich einheitlich als Schaltfläche dargestellt, obwohl es sich um 2 unterschiedliche HTML-Elemente handelt (\<a>, \<form type="submit">).
 
 Es existiert nun auch die Möglichkeit, den Server per Aufruf der Adresse "http://127.0.0.1:8080/shutdown" herunterzufahren. Diese Option wird dem Benutzer auf der Webseite nicht angezeigt.
 
@@ -131,8 +135,3 @@ Wird die Webseite aufgerufen, schickt der Browser eine GET-Request an den Server
 ![Traffic beim Speichern von Formulardaten](Traffic beim Speichern von Formulardaten.jpg "Traffic beim Speichern")
 
 Klickt der Benutzer auf "speichern", sendet der Browser eine POST-Request an den Server mit allen Daten, die der Benutzer eingegeben hat und die vom Server generierte ID.
-
-## 3.3. beim Umschalten zwischen verschiedenen Ansichten ##
-
-![Traffic beim Umschalten von Liste in Aufzählung](Traffic beim Umschalten von Liste in Aufzählung.jpg "Traffic beim Umschalten")
-

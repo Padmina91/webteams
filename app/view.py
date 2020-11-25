@@ -17,20 +17,9 @@ class View:
 
    def create_list(self, data_param):
       self.read_view_file()
-      if self.view_style == "list":
-         markup = self.create_list1(data_param)
-      else:
-         markup = self.create_list2(data_param)
-      return markup
-
-   def create_list1(self, data_param):
-      template = self.lookup.get_template('list.tpl')
-      markup = template.render(data = data_param, listform_text = "Aufzählung", listform = "list2")
-      return markup
-   
-   def create_list2(self, data_param):
-      template = self.lookup.get_template('list2.tpl')
-      markup = template.render(data = data_param, listform_text = "Liste", listform = "list")
+      tpl_file = self.view_style + '.tpl'
+      template = self.lookup.get_template(tpl_file)
+      markup = template.render(data = data_param)
       return markup
 
    def create_form(self, id, data_param):

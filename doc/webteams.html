@@ -195,13 +195,15 @@
 <p>Die Benutzerschnittstelle für Aktionen, die der Benutzer auf der Webseite initiiert, ist je nach Aktion entweder die “application.py” oder die “webteams.js”.</p>
 <h4 id="aktion-erfassen">1.2.2.1. Aktion “erfassen”</h4>
 <p>Da es sich hier um einen Anchor-Tag (&lt;a&gt;) handelt, wird durch Klick auf “erfassen” ein Link aufgerufen und diese Anfrage wird durch die “application.py” entgegengenommen, die ihrerseits ein leeres Formular erzeugt. Hierzu bedient sich die Klasse “Application” mehreren Hilfsmethoden aus den Klassen “Database” und “DataId” und “View”.</p>
-<h4 id="aktion-als-aufzählung-darstellen-und-als-liste-darstellen">1.2.2.2. Aktion “als Aufzählung darstellen” und “als Liste darstellen”</h4>
-<p>Hierbei handelt es sich um einen Button (&lt;button&gt;), auf dem ein EventListener liegt. Daher ist die Schnittstelle in diesem Fall die “webteams.js”, die ihrerseits eine Anfrage an den Webserver schickt, aber dazu später im Kapitel <span style="color:red;">später ergänzen!</span> mehr.</p>
-<h4 id="aktion-bearbeiten">1.2.2.3. Aktion “bearbeiten”</h4>
+<h4 id="aktion-speichern">1.2.2.2. Aktion “speichern”</h4>
+<p>Der Pseudo-Button “speichern” ist eigentlich ein input-Element (&lt;input type=“submit” value=“speichern” class=“pseudo-button”/&gt;), das eine POST-Anfrage an den Server schickt. Die eingegebenen Daten und die von der Applikation erzeugte ID werden im Request-Body mitgesendet.</p>
+<h4 id="aktion-als-aufzählung-darstellen-und-als-liste-darstellen">1.2.2.3. Aktion “als Aufzählung darstellen” und “als Liste darstellen”</h4>
+<p>Hierbei handelt es sich um einen Anchor-Tag (&lt;a&gt;), der auf die URL “/toggle_view” verweist, was die Methode <code>toggle_view()</code> in der “application.py” auslöst. Diese ändert die view_file.json ab und leitet den Browser zur Startseite weiter, die dann mit der neuen Ansicht geöffnet wird.</p>
+<h4 id="aktion-bearbeiten">1.2.2.4. Aktion “bearbeiten”</h4>
 <p>Hierbei handelt sich auch um einen Anchor-Tag (&lt;a&gt;) wie bei der Aktion “erfassen”. Es wird ein Link aufgerufen, dem als Parameter die ID des zu bearbeitenden Datensatzes angehangen wird. Diese Information wird von der “application.py” aufgenommen und es wird ein mit den entsprechenden Daten gefülltes Formular erzeugt. Hierzu werden wieder Hilfsmethoden aus den Klassen “Database” und “DataId” und “View” herangezogen.</p>
-<h4 id="aktion-löschen">1.2.2.4. Aktion “löschen”</h4>
-<p>Hierbei handelt es sich wieder um einen Button (&lt;button&gt;), auf dem ebenfalls ein EventListener liegt. Nach einem Klick auf den “löschen”-Button wird zunächst durch die “webteams.js” ein Dialog erzeugt, der den Benutzer fragt, ob er den Eintrag wirklichen löschen möchte. Bestätigt er diesen Dialog mit “OK”, dann schickt die Methode <code>confirm_delete()</code> eine Anfrage an den Webserver.</p>
-<h4 id="aktion-abbrechen">1.2.2.5. Aktion “abbrechen”</h4>
+<h4 id="aktion-löschen">1.2.2.5. Aktion “löschen”</h4>
+<p>Hierbei handelt es sich wieder um einen Anchor-Tag (&lt;a&gt;). Nach einem Klick auf den “löschen”-Button wird zunächst durch die “webteams.js” ein Dialog erzeugt, der den Benutzer fragt, ob er den Eintrag wirklichen löschen möchte. Bricht der Nutzer das Löschen mit Klick auf “Cancel” ab, dann verhindert die “webteams.js” mit der Methode <code>event.preventDefault()</code> die Ausführung der Lösch-Aktion. Klickt der Benutzer hingegen auf “OK”, dann wird die Löschung durchgeführt und der Browser wieder auf die Startseite umgeleitet.</p>
+<h4 id="aktion-abbrechen">1.2.2.6. Aktion “abbrechen”</h4>
 <p>Der Anchor-Tag (&lt;a&gt;) “abbrechen” führt wieder auf die Startseite zurück, ohne das Formular abzuschicken.</p>
 <h3 id="interne-funktionsweise">1.2.3. Interne Funktionsweise</h3>
 <h4 id="programmverhalten">1.2.3.1. Programmverhalten</h4>
@@ -228,18 +230,19 @@
 <p>Die Aktion “abbrechen” wurde im Formular ergänzt. Ein Klick auf “abbrechen” bricht die Formular-Bearbeitung ab und führt zurück auf die Startseite.</p>
 <p>Das Löschen von Einträgen wurde implementiert. Hierzu wurde ein Button bei jedem Team ergänzt, das beim Klick ein Dialog-Fenster öffnet mit der Nachfrage: “Wollen Sie den Eintrag wirklich löschen?” und den Optionen “OK” und “Cancel”. Klickt der Benutzer auf “OK”, wird der Datensatz gelöscht und die Webseite neu geladen, sodass die aktalisierte Liste angezeigt wird. Klickt der Benutzer auf “Cancel”, schließt sich lediglich das Dialog-Fenster.</p>
 <p>Die Möglichkeit zur Umschaltung zwischen einer Listenansicht und einer Aufzählungsansicht wurde geschaffen. Bei Klick auf die Schaltfläche “als Aufzählung/Liste darstellen” aktiviert sich die jeweils andere Ansicht.</p>
-<p>Außerdem wurde die Webseite mit CSS gestylt. Unter anderem wurden die Aktionen “erfassen”, “bearbeiten”, “löschen”, “als Aufzählung/Liste darstellen”, “abbrechen” und “speichern” allesamt äußerlich einheitlich als Schaltfläche dargestellt, obwohl es sich um 3 unterschiedliche HTML-Elemente handelt (&lt;a&gt;, &lt;button&gt;, &lt;form type=“submit”&gt;).</p>
-<p>Es gibt nun auch die Möglichkeit, den Server per Aufruf der Adresse “http://127.0.0.1:8080/shutdown” herunterzufahren. Diese Option wird dem Benutzer auf der Webseite nicht angezeigt.</p>
+<p>Außerdem wurde die Webseite mit CSS gestylt. Unter anderem wurden die Aktionen “erfassen”, “bearbeiten”, “löschen”, “als Aufzählung/Liste darstellen”, “abbrechen” und “speichern” allesamt äußerlich einheitlich als Schaltfläche dargestellt, obwohl es sich um 2 unterschiedliche HTML-Elemente handelt (&lt;a&gt;, &lt;form type=“submit”&gt;).</p>
+<p>Es existiert nun auch die Möglichkeit, den Server per Aufruf der Adresse “http://127.0.0.1:8080/shutdown” herunterzufahren. Diese Option wird dem Benutzer auf der Webseite nicht angezeigt.</p>
 <hr />
 <h1 id="beschreibung-des-http-datenverkehrs">3. Beschreibung des HTTP-Datenverkehrs</h1>
 <h2 id="beim-start-der-anwendung">3.1. beim Start der Anwendung</h2>
 <figure>
-<img src="Traffic%20beim%20Start%20der%20Anwendung.jpg" title="Traffic Start" alt="Traffic beim Start der Anwendung" /><figcaption aria-hidden="true">Traffic beim Start der Anwendung</figcaption>
+<img src="Traffic%20beim%20Start%20der%20Anwendung.jpg" title="Traffic beim Start" alt="Traffic beim Start der Anwendung" /><figcaption aria-hidden="true">Traffic beim Start der Anwendung</figcaption>
 </figure>
+<p>Wird die Webseite aufgerufen, schickt der Browser eine GET-Request an den Server, in der ein html-Dokument angefordert wird. Dieses wird auch vom Server ausgeliefert, nebst CSS Stylesheet und JavaScript-Datei.</p>
 <h2 id="beim-speichern-von-formulardaten">3.2. beim Speichern von Formulardaten</h2>
 <figure>
-<img src="Traffic%20beim%20Speichern%20von%20Formulardaten.jpg" title="Traffic Speichern" alt="Traffic beim Speichern von Formulardaten" /><figcaption aria-hidden="true">Traffic beim Speichern von Formulardaten</figcaption>
+<img src="Traffic%20beim%20Speichern%20von%20Formulardaten.jpg" title="Traffic beim Speichern" alt="Traffic beim Speichern von Formulardaten" /><figcaption aria-hidden="true">Traffic beim Speichern von Formulardaten</figcaption>
 </figure>
-<h2 id="beim-umschalten-zwischen-verschiedenen-ansichten">3.3. beim Umschalten zwischen verschiedenen Ansichten</h2>
+<p>Klickt der Benutzer auf “speichern”, sendet der Browser eine POST-Request an den Server mit allen Daten, die der Benutzer eingegeben hat und die vom Server generierte ID.</p>
 </body>
 </html>

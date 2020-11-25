@@ -20,7 +20,7 @@
             %>
             <li><span class="team-header">Team ${nr}:</span>
                <a class="pseudo-button" href="/edit/${key}">bearbeiten</a>
-               <button class="delete_button" value="${key}">löschen</button>
+               <a class="pseudo-button delete-button" href="/delete/${key}">löschen</a>
                <ul>
                   <li>Name: ${data[key][0]}, Vorname: ${data[key][1]}, Matr-Nr.: ${data[key][2]}, Anzahl Semester: ${data[key][3]}</li>
                   <li>Name: ${data[key][4]}, Vorname: ${data[key][5]}, Matr-Nr.: ${data[key][6]}, Anzahl Semester: ${data[key][7]}</li>
@@ -33,7 +33,7 @@
                <a class="pseudo-button" href="/add">erfassen</a>
             </span>
             <span>
-               <button class="toggle_list">als ${listform_text} darstellen</button>
+               <a class="pseudo-button" href="/toggle_view">als Liste darstellen</a>
             </span>
          </div>
       </div>

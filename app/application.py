@@ -30,7 +30,7 @@ class Application:
          self.database.update_entry(id, data)
       else:
          self.database.new_entry(data)
-      return self.create_list()
+      raise cherrypy.HTTPRedirect('/')
 
    @cherrypy.expose
    def delete(self, id_param):
@@ -38,7 +38,7 @@ class Application:
       if id != None:
          deletion_successful = self.database.delete_entry(id)
       if deletion_successful:
-         return self.create_list()
+         raise cherrypy.HTTPRedirect('/')
       else:
          raise cherrypy.HTTPError(500, "Diesen Eintrag gibt es nicht (mehr).")
 
@@ -65,3 +65,4 @@ class Application:
    @cherrypy.expose
    def toggle_view(self):
       self.view.toggle_view()
+      raise cherrypy.HTTPRedirect('/')
