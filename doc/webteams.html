@@ -152,8 +152,9 @@
 <header id="title-block-header">
 <h1 class="title">Webteams-Doku</h1>
 </header>
-<h1 id="aufbau-der-webanwendung">Aufbau der Webanwendung</h1>
-<p>Die Webanwendung besteht aus folgenden Dateien (Ordner kursiv):</p>
+<h1 id="aufbau-der-webanwendung">1. Aufbau der Webanwendung</h1>
+<h2 id="dateistruktur">1.1. Dateistruktur</h2>
+<p>Die Webanwendung besteht aus folgenden Dateien (Ordner werden kursiv dargestellt):</p>
 <ul>
 <li>server.py</li>
 <li><em>app</em>
@@ -181,11 +182,49 @@
 <li>list2.tpl</li>
 </ul></li>
 </ul>
+<h2 id="funktionsweise">1.2. Funktionsweise</h2>
+<h3 id="serverstart">1.2.1. Serverstart</h3>
+<p>Der Einstiegspunkt bei Serverstart befindet sich in der Datei “server.py”. Hier werden alle Konfigurationen vorgenommen und der Server wird gestartet.</p>
+<p>Konfigurationen, die in der “server.py” erfolgen, sind u.a.:</p>
+<ul>
+<li>welches Directory das Root-Directory für den Server ist</li>
+<li>wie die Ordnerstruktur serverseitig aussieht</li>
+<li>ob und wo Log-Dateien abgespeichert werden</li>
+</ul>
+<h3 id="interaktion-mit-benutzer">1.2.2. Interaktion mit Benutzer</h3>
+<p>Die Benutzerschnittstelle für Aktionen, die der Benutzer auf der Webseite initiiert, ist je nach Aktion entweder die “application.py” oder die “webteams.js”.</p>
+<h4 id="aktion-erfassen">1.2.2.1. Aktion “erfassen”</h4>
+<p>Da es sich hier um einen Anchor-Tag (&lt;a&gt;) handelt, wird durch Klick auf “erfassen” ein Link aufgerufen und diese Anfrage wird durch die “application.py” entgegengenommen, die ihrerseits ein leeres Formular erzeugt. Hierzu bedient sich die Klasse “Application” mehreren Hilfsmethoden aus den Klassen “Database” und “DataId” und “View”.</p>
+<h4 id="aktion-als-aufzählung-darstellen-und-als-liste-darstellen">1.2.2.2. Aktion “als Aufzählung darstellen” und “als Liste darstellen”</h4>
+<p>Hierbei handelt es sich um einen Button (&lt;button&gt;), auf dem ein EventListener liegt. Daher ist die Schnittstelle in diesem Fall die “webteams.js”, die ihrerseits eine Anfrage an den Webserver schickt, aber dazu später im Kapitel <span style="color:red;">später ergänzen!</span> mehr.</p>
+<h4 id="aktion-bearbeiten">1.2.2.3. Aktion “bearbeiten”</h4>
+<p>Hierbei handelt sich auch um einen Anchor-Tag (&lt;a&gt;) wie bei der Aktion “erfassen”. Es wird ein Link aufgerufen, dem als Parameter die ID des zu bearbeitenden Datensatzes angehangen wird. Diese Information wird von der “application.py” aufgenommen und es wird ein mit den entsprechenden Daten gefülltes Formular erzeugt. Hierzu werden wieder Hilfsmethoden aus den Klassen “Database” und “DataId” und “View” herangezogen.</p>
+<h4 id="aktion-löschen">1.2.2.4. Aktion “löschen”</h4>
+<p>Hierbei handelt es sich wieder um einen Button (&lt;button&gt;), auf dem ebenfalls ein EventListener liegt. Nach einem Klick auf den “löschen”-Button wird zunächst durch die “webteams.js” ein Dialog erzeugt, der den Benutzer fragt, ob er den Eintrag wirklichen löschen möchte. Bestätigt er diesen Dialog mit “OK”, dann schickt die Methode <code>confirm_delete()</code> eine Anfrage an den Webserver.</p>
+<h3 id="interne-funktionsweise">1.2.3. Interne Funktionsweise</h3>
+<h4 id="programmverhalten">1.2.3.1. Programmverhalten</h4>
+<h5 id="application.py">application.py</h5>
+<p>Die Klasse “Application” steuert die Webanwendung und stellt die Benutzerschnittstelle dar. Sie erstellt das Formular mit der Methode <code>add()</code> und nimmt Daten in der Methode <code>save()</code> entgegen. Außerdem erstellt sie mit der Methode <code>create_list()</code> jeweils die gewünschte Listen- oder Aufzählungsansicht.</p>
+<h5 id="database.py">database.py</h5>
+<p>Die Klasse “Database” ist für die Speicherung der Team-Daten zuständig. Dies tut sie, indem sie die Datei “webteams.json” pflegt.</p>
+<h5 id="dataid.py">dataid.py</h5>
+<p>Hier wird die jeweils aktuelle ID erzeugt und verwaltet. Zur Speicherung der aktuellen maxID wird die Datei “maxid.json” geschrieben.</p>
+<h5 id="view.py">view.py</h5>
+<p>Diese Klasse kümmert sich um die Darstellungsweise als Liste bzw. Aufzählung. Um die aktuelle Darstellungsweise festzuhalten, wird die Datei “view_file.json” aktualisiert, in der immer nur “list” oder “list2” geschrieben wird. So ist auch nach einem Server-Neustart und nach Cache-Leerung im Browser immer noch die zuletzt gewählte Darstellungsweise gespeichert.</p>
+<h4 id="datenverwaltung">1.2.3.1. Datenverwaltung</h4>
+<p>Zur Datenverwaltung werden 3 JSON-Dokumente benutzt:</p>
+<h5 id="maxid.json">maxid.json</h5>
+<p>Hier wird die derzeit aktuelle höchste ID in Benutzung abgespeichert. Wird vom Benutzer ein neuer Datensatz erzeugt, wird die ID um eins erhöht. Diese ID dient nur internen Verarbeitungszwecken und wird dem Benutzer nicht angezeigt.</p>
+<h5 id="view_file.json">view_file.json</h5>
+<p>Hier wird die als letztes vom Benutzer ausgewählte Ansicht abgespeichert. Beim Aufruf der Webseite wird immer zuerst abgefragt, welche der beiden Ansichten ausgegeben werden soll und die entsprechende .tpl-Datei ausgewählt.</p>
+<h5 id="webteams.json">webteams.json</h5>
+<p>In dieser Datei werden die Teams nach ID’s sortiert abgespeichert. Die Sortierung nach ID’s ergibt sich lediglich durch den Umstand, dass es nicht möglich ist, zu einem späteren Zeitpunkt ein Team mit einer niedrigeren ID als die derzeit aktuelle abzuspeichern. Gelöschte Teams werden auch aus dieser Datei entfernt, die ID des gelöschten Teams wird jedoch nicht wiederverwendet.</p>
 <hr />
-<h1 id="durchgeführte-ergänzungen">Durchgeführte Ergänzungen</h1>
+<h1 id="durchgeführte-ergänzungen">2. Durchgeführte Ergänzungen</h1>
 <hr />
-<h1 id="beschreibung-des-http-datenverkehrs">Beschreibung des HTTP-Datenverkehrs</h1>
-<h2 id="beim-start-der-anwendung">beim Start der Anwendung</h2>
-<h2 id="beim-speichern-von-formulardaten">beim Speichern von Formulardaten</h2>
+<h1 id="beschreibung-des-http-datenverkehrs">3. Beschreibung des HTTP-Datenverkehrs</h1>
+<h2 id="beim-start-der-anwendung">3.1. beim Start der Anwendung</h2>
+<h2 id="beim-speichern-von-formulardaten">3.2. beim Speichern von Formulardaten</h2>
+<h2 id="beim-umschalten-zwischen-verschiedenen-ansichten">3.3. beim Umschalten zwischen verschiedenen Ansichten</h2>
 </body>
 </html>

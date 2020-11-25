@@ -69,8 +69,8 @@
                       name="semesteranzahl2" required />
             </div>
             <div class="inner-flex-container">
-               <input type="submit" value="Speichern"/>
-               <a class="pseudo-button" id="abbrechen" href="http://127.0.0.1:8080/">Abbrechen</a>
+               <input type="submit" value="speichern"/>
+               <a class="pseudo-button" id="abbrechen" href="http://127.0.0.1:8080/">abbrechen</a>
             </div>
          </form>
       </div>

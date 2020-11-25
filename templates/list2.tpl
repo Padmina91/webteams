@@ -33,7 +33,7 @@
                <a class="pseudo-button" href="/add">erfassen</a>
             </span>
             <span>
-               <button class="toggle_list">Als ${listform_text} darstellen</button>
+               <button class="toggle_list">als ${listform_text} darstellen</button>
             </span>
          </div>
       </div>
