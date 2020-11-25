@@ -8,7 +8,7 @@ body {
     font-size: 1.1rem;
 }
 
-a.pseudo-button, button, input[type=submit] {
+a.pseudo-button, input.pseudo-button, button {
     font-family: 'Quicksand', sans-serif;
     color: black;
     font-weight: 700;
@@ -22,7 +22,6 @@ a.pseudo-button, button, input[type=submit] {
 }
 
 .outer-flex-container {
-    /* border: 10px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,7 +29,6 @@ a.pseudo-button, button, input[type=submit] {
 
 .inner-flex-container {
     height: 50px;
-    /* border: 2px solid red; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

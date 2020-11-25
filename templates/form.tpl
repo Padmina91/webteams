@@ -69,11 +69,11 @@
                       name="semesteranzahl2" required />
             </div>
             <div class="inner-flex-container">
-               <input type="submit" value="speichern"/>
-               <a class="pseudo-button" id="abbrechen" href="/">abbrechen</a>
+               <input type="submit" value="speichern" class="pseudo-button"/>
+               <a class="pseudo-button" href="/">abbrechen</a>
             </div>
          </form>
       </div>
-      <script type="text/javascript" src="webteams.js"></script>
+      <script type="text/javascript" src="/webteams.js"></script>
    </body>
 </html>

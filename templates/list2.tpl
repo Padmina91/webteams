@@ -37,6 +37,6 @@
             </span>
          </div>
       </div>
-      <script type="text/javascript" src="webteams.js"></script>
+      <script type="text/javascript" src="/webteams.js"></script>
    </body>
 </html>
