@@ -6,7 +6,7 @@
       <meta charset="UTF-8" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
-      <link href="webteams.css" rel="stylesheet" type="text/css" />
+      <link href="/webteams.css" rel="stylesheet" type="text/css" />
    </head>
    <body>
       <div class="outer-flex-container">
@@ -70,7 +70,7 @@
             </div>
             <div class="inner-flex-container">
                <input type="submit" value="speichern"/>
-               <a class="pseudo-button" id="abbrechen" href="http://127.0.0.1:8080/">abbrechen</a>
+               <a class="pseudo-button" id="abbrechen" href="/">abbrechen</a>
             </div>
          </form>
       </div>

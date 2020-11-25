@@ -6,7 +6,7 @@
       <meta charset="UTF-8" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
-      <link href="webteams.css" rel="stylesheet" type="text/css" />
+      <link href="/webteams.css" rel="stylesheet" type="text/css" />
    </head>
    <body>
       <div class="outer-flex-container">
