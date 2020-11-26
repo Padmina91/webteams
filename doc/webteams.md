@@ -2,6 +2,8 @@
 title: Webteams-Doku
 ...
 
+Dieses Projekt wurde von Marina Inokuchi bearbeitet. Letztes Bearbeitungsdatum: 25.11.2020.
+
 # 1. Aufbau der Webanwendung #
 
 ## 1.1. Dateistruktur ##
